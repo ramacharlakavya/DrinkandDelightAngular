@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><b>Stock Management</b></title>
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+ <style type="text/css">
+   input[type=number]::-webkit-inner-spin-button, 
+   input[type=number]::-webkit-outer-spin-button { 
+       -webkit-appearance: none;
+       -moz-appearance: none;
+       appearance: none;
+       margin: 0; 
+   }
+ </style>
+</head>
+<body>
+<br/>
+  <h1 align="center"><b>Welcome To Inventory Management System</b></h1>
+<div class="container">
+  <h1> </h1>
+ 
+</div>
+<router-outlet></router-outlet>
+</body>
+</html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-sm btn-secondary navbar-dark">
+      <a class="navbar-brand" href="">
+      </a>
+      <ul class="nav nav-pills ">
+      <li class="nav-item ">
+        <a class="nav-link" class="btn btn-outline-success  btn-sm  mr-3" routerLink="/productstock">Product Stock</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" class="btn btn-outline-success btn-sm mr-3"  routerLink="/rawmaterialstock">Rawmaterial Stock</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" class="btn btn-outline-success btn-sm mr-3"  routerLink="/productupdate">Product Update</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" class="btn btn-outline-success btn-sm mr-3"  routerLink="/rawmaterialupdate">Rawmaterial Update</a>
+      </li>
+    </ul>
+    </nav>
+    </div>
+    <router-outlet></router-outlet>

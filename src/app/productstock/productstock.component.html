@@ -1,0 +1,65 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div class="container">
+
+        <h3>Product Details</h3>
+
+    <form #userForm="ngForm" (ngSubmit)='onSubmit(userForm.value)'>
+
+        <div class="form-group">
+
+            <label>Product ID: </label>
+
+            <input required minlength="1" type="number" #id='ngModel' name="id" ngModel class="form-control">
+            <div *ngIf='id.errors
+            && id.touched' class="alert alert-danger">
+
+    <div [hidden]='!id.errors.required'>
+
+        Provide Product  Id
+
+    </div>
+
+</div>
+               </div>
+
+
+
+        <input [disabled]="userForm.invalid" type="submit" value="Get Product" class="btn btn-primary">
+
+    </form>
+
+    <div class="container">
+        <table class="table table-striped" *ngIf="product  else elseBlock">
+            <thead>
+           
+               <tr> orderId: {{product.orderId}}</tr>
+                <tr>name: {{product.name}}</tr>
+                <tr>deliveryDate:{{product.deliveryDate}}</tr>
+                <tr>exitDate:{{product.exitDate}}</tr>
+                <tr>expiryDate:{{product.expiryDate}}</tr>
+                <tr>manufacturingDate:{{product.manufacturingDate}}</tr>
+                <tr>price:{{product.price}}</tr>
+                <tr>pricePerUnit:{{product.pricePerUnit}}</tr>
+                <tr>qualityCheck:{{product.qualityCheck}}</tr>
+                <tr>quantityUnit:{{product.quantityUnit}}</tr>
+                <tr>quantityValue:{{product.quantityValue}}</tr>
+                
+                
+                <tr>warehouseId:{{product.warehouseId}}</tr>
+                
+               
+                
+                
+               
+            
+            </thead>
+           
+        </table>
+        <ng-template #elseBlock>
+            <h4 align="center"> There is no Product to display </h4>
+        </ng-template>
+    
+    </div>

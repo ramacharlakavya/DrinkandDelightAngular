@@ -1,0 +1,22 @@
+<!--update product stock-->
+<div class="container pb-5" id="RawMaterialStockID">
+    <div class="row pb-5 mt-5">
+      <div class="col-md-6 offset-md-3 mt-3">
+        <form class="text-center border border-light p-5" #productupdate="ngForm" (ngSubmit)="updateproduct(productupdate.value)">
+            <p class="h4 text-left"> Update Product Stock</p>
+            <p class="text-left">Enter Order ID</p>
+            <input type="number" id="" name="orderid" class="form-control mb-4" placeholder="Enter Order Order ID" ngModel>
+            <p class="text-left">Set Delivery Date</p>
+            <input type="date"  id="" name="deliverydate" class="form-control mb-4" placeholder="Set Delivery Date" ngModel>
+            <p class="text-left">Set Manufacturing Date</p>
+            <input type="date"  id="" name="manufacturingdate" class="form-control mb-4" placeholder="Set Manufacturing Date" ngModel>
+            <p class="text-left">Set Expiry Date</p>
+            <input type="date"  id="" name="expirydate" class="form-control mb-4" placeholder="Set Expiry Date" ngModel>
+            <p class="text-left">Set Exit Date</p>
+            <input type="date"  id="" name="exitdate" class="form-control mb-4" placeholder="Set Exit Date" ngModel>
+            <button class="btn-sm teal text-white btn rounded" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>  
+  </div>
+  <!-- end of product stock update -->

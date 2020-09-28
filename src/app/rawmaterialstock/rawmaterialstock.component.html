@@ -1,0 +1,58 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div class="container">
+
+        <h3>RawMaterial Details</h3>
+
+    <form #userForm="ngForm" (ngSubmit)='onSubmit(userForm.value)'>
+
+        <div class="form-group">
+
+            <label>RawMaterial ID: </label>
+
+            <input required minlength="1" type="number" #id='ngModel' name="id" ngModel class="form-control">
+            <div *ngIf='id.errors
+            && id.touched' class="alert alert-danger">
+
+    <div [hidden]='!id.errors.required'>
+
+        Provide  Id
+
+    </div>
+
+</div>
+               </div>
+
+
+
+        <input [disabled]="userForm.invalid" type="submit" value="Get RawMaterial" class="btn btn-primary">
+
+    </form>
+   
+    <div class="container">
+        <table class="table table-striped" *ngIf="rawmaterial  else elseBlock">
+            <thead>
+           
+               <tr> orderId: {{rawmaterial.orderId}}</tr>
+                <tr>name: {{rawmaterial.name}}</tr>
+                <tr>pricePerUnit:{{rawmaterial.pricePerUnit}}</tr>
+                <tr>quantityValue:{{rawmaterial.quantityValue}}</tr>
+                <tr>quantityUnit:{{rawmaterial.quantityUnit}}</tr>
+                <tr>price:{{rawmaterial.price}}</tr>
+                <tr>warehouseId:{{rawmaterial.warehouseId}}</tr>
+                <tr>deliveryDate:{{rawmaterial.deliveryDate}}</tr>
+                <tr>manufacturingDate:{{rawmaterial.manufacturingDate}}</tr>
+                <tr>expiryDate:{{rawmaterial.expiryDate}}</tr>
+                <tr>qualityCheck:{{rawmaterial.qualityCheck}}</tr>
+                <tr>processDate:{{rawmaterial.processDate}}</tr>
+            
+            </thead>
+           
+        </table>
+        <ng-template #elseBlock>
+            <h4 align="center"> There are no RawMaterial to display </h4>
+        </ng-template>
+    
+    </div>
